@@ -1,7 +1,6 @@
 class HomeController < ApplicationController
 layout 'welcome'
 def show
-@user = User.new
 end
 
 #login
@@ -10,7 +9,7 @@ def login
 	passwrd1 = params[:home]['password']
 	a = emal.split('@').size
 	if a>=2
-		if emal != nil && passwrd1 != nil
+		if emal != "" && passwrd1 != ""
 			@user = User.find_by_email(emal)
 			passwrd2 = @user.password
 			if @user.status == 'NO'
@@ -32,7 +31,7 @@ def login
 			redirect_to :controller => 'home',:action=>'show'
 		end
 	else
-		if emal != nil && passwrd1 != nil
+		if emal != "" && passwrd1 != ""
 			@userid = Userid.find_by_userid(emal)
 			@user = Userid.find_by_userid(emal).user
 			passwrd2 = @user.password
