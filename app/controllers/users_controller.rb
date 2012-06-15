@@ -49,7 +49,7 @@ end
 
 def verify
 @user = User.find_by_vcode(params[:id])
-@user.vcode = 'YES'
+@user.status = 'YES'
 if @user.save
 flash[:notice] = "Email verified"
 redirect_to :controller=> 'home', :action=> 'show'

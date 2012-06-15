@@ -11,7 +11,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20120615031525) do
+ActiveRecord::Schema.define(:version => 20120615084759) do
 
   create_table "sessions", :force => true do |t|
     t.string   "session_id", :null => false
@@ -27,6 +27,16 @@ ActiveRecord::Schema.define(:version => 20120615031525) do
     t.integer "user_id"
     t.string  "fname"
     t.string  "lname"
+  end
+
+  create_table "userids", :force => true do |t|
+    t.integer  "user_id"
+    t.string   "email"
+    t.string   "userid"
+    t.string   "vcode"
+    t.string   "status"
+    t.datetime "created_at", :null => false
+    t.datetime "updated_at", :null => false
   end
 
   create_table "users", :force => true do |t|

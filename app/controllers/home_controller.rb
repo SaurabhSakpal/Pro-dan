@@ -15,7 +15,7 @@ def login
 			flash[:notice] = "Verify your email first "
 			redirect_to :controller => 'home',:action=>'show'
 		else
-			if passwrd1 == passwrd2  
+			if (passwrd1 == passwrd2)
 				session[:user_id] = @user.id
 				redirect_to :controller => 'profiles',:action=>'show', :id=>@user.id
 				flash[:notice] = "successfully logged in"

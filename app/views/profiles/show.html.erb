@@ -1,6 +1,22 @@
+<p style="color: green"><%= flash[:notice] %></p>
 <h2>Log out</h2>
 <p>This page cant be accessed without signing in<p>
-<%= @user.email + ' '+ @user.password %>
 <form accept-charset="UTF-8" action="/home/logout" method="post" class = "login" >
 <input class = "button" name="submit" type="submit" value="Log Out"/>
 </form>
+<br>
+<hr>
+<br>
+<h2>create Unique ID</h2>
+<form accept-charset="UTF-8" action="/profiles/addid" method="post" class = "login" >
+<input class = "button" name="submit" type="submit" value="Create Unique ID"/>
+</form>
+<br>
+<hr>
+<br>
+<h2>ALL USER IDS</h2>
+<% @user.userids.each do |s| %>
+<p> UNIQUE CODE: &nbsp;<%= s.userid %> &nbsp; &nbsp; &nbsp;
+VERIFIED:-- &nbsp; <%= s.status %>
+</p>
+<% end %>

@@ -11,6 +11,9 @@ match 'home/logout' => 'home#logout'
 match 'users/create' => 'users#create'
 match 'users/verify/:id' => 'users#verify', :as => :verify
 match 'profiles/show/:id' => 'profiles#show'
+match 'profiles/show/' => 'profiles#show'
+match 'profiles/addid/'=>'profiles#addid'
+match 'profiles/verify/:id' => 'profiles#verify', :as => :verifyuserid
   # Sample of named route:
   #  match 'products/:id/purchase' => 'catalog#purchase', :as => :purchase
   # This route can be invoked with purchase_url(:id => product.id)
