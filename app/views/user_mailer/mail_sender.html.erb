@@ -1,0 +1,4 @@
+HELLO,
+Thank you for registering!
+click on the link below to verify your email.
+<%= link_to "Verify", verify_url(:id => @user.vcode, :host => 'localhost:3000') %>

@@ -1,0 +1,20 @@
+<hr>
+<p style="color: green"><%= flash[:notice] %></p>
+<h2>Sign Up</h2>
+
+<form accept-charset="UTF-8" action="/users/create"method="post" class = "login" >
+First name: <input id="bk_title" name="user[fname]" size="30" type="text" /><br>
+Last name: <input id="bk_title" name="user[lname]" size="30" type="text" /><br>
+Email: <input id="bk_title" name="user[email]" size="30" type="text" /><br>
+password: <input id="bk_title" name="user[password]" size="30" type="password" /><br>
+password confirm : <input id="bk_title" name="user[confirm_password]" size="30" type="password" /><br>
+<input class = "button" name="submit" type="submit" value="Sign Up"/>
+</form>
+<br>
+<hr>
+<h2>Sign In</h2>
+<form accept-charset="UTF-8" action="/home/login" method="post" class = "login" >
+UserId/Email: <input id="bk_title" name="home[email]" size="30" type="text" /><br>
+password: <input id="bk_title" name="home[password]" size="30" type="password" /><br>
+<input class = "button" name="submit" type="submit" value="Sign in"/>
+</form>
