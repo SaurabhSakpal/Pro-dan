@@ -36,3 +36,6 @@ gem 'jquery-rails'
 
 # To use debugger
 # gem 'ruby-debug19', :require => 'ruby-debug'
+
+gem 'devise', :git => 'git://github.com/plataformatec/devise.git'
+gem 'oauth2', :git => 'git://github.com/intridea/oauth2.git'

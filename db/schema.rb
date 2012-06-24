@@ -11,7 +11,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20120615084759) do
+ActiveRecord::Schema.define(:version => 20120624094204) do
 
   create_table "sessions", :force => true do |t|
     t.string   "session_id", :null => false
@@ -46,6 +46,18 @@ ActiveRecord::Schema.define(:version => 20120615084759) do
     t.datetime "updated_at", :null => false
     t.string   "vcode"
     t.string   "status"
+  end
+
+  create_table "visits", :force => true do |t|
+    t.text     "path_from"
+    t.text     "path_to"
+    t.text     "http_method"
+    t.string   "caller_ip"
+    t.text     "caller_host"
+    t.text     "caller_browser"
+    t.string   "caller_lang"
+    t.datetime "created_at",     :null => false
+    t.datetime "updated_at",     :null => false
   end
 
 end

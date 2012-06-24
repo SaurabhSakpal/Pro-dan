@@ -1,5 +1,10 @@
 class ApplicationController < ActionController::Base
   #protect_from_forgery
+  before_filter :log_visit
+  private
+  def log_visit
+    @logged_visit = Visit.log(current_user, request)
+  end
 protected
 # Returns the currently logged in user or nil if there isn't one
 def current_user

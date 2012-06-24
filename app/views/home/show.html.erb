@@ -18,3 +18,37 @@ UserId/Email: <input id="bk_title" name="home[email]" size="30" type="text" /><b
 password: <input id="bk_title" name="home[password]" size="30" type="password" /><br>
 <input class = "button" name="submit" type="submit" value="Sign in"/>
 </form>
+<br>
+<br>
+<hr>
+<h2>Sign In USING FACEBOOK</h2>
+ <html>
+    <head>
+      <title>My Facebook Login Page</title>
+    </head>
+    <body>
+
+      <div id="fb-root"></div>
+      <script>
+        window.fbAsyncInit = function() {
+          FB.init({
+            appId      : '450295804988462', // App ID
+            channelUrl : 'http://localhost:3000/channel.html', // Channel File
+            status     : true, // check login status
+            cookie     : true, // enable cookies to allow the server to access the session
+            xfbml      : true  // parse XFBML
+          });
+          // Additional initialization code here
+        };
+        // Load the SDK Asynchronously
+        (function(d){
+           var js, id = 'facebook-jssdk', ref = d.getElementsByTagName('script')[0];
+           if (d.getElementById(id)) {return;}
+           js = d.createElement('script'); js.id = id; js.async = true;
+           js.src = "//connect.facebook.net/en_US/all.js";
+           ref.parentNode.insertBefore(js, ref);
+         }(document));
+      </script>
+	<div class="fb-login-button">Login with Facebook</div>
+    </body>
+ </html>
